@@ -6,7 +6,7 @@ COPY . .
 
 RUN ./gradlew build
 
-FROM openjdk:8-jre as APP
+FROM openjdk:22-ea-22 as APP
 
 EXPOSE 8080
 
