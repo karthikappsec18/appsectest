@@ -21,7 +21,16 @@ plugins {
     id "groovy"
     id "org.owasp.dependencycheck" version "5.0.0-M2"
     id "com.github.spotbugs" version "1.7.1"
+    id "org.sonarqube" version "3.3"
 }
+sonarqube {
+    properties {
+        property "sonar.host.url", "https://sonarcloud.io/projects"
+        property "sonar.login", "b36664df9e6a793d93525c12d129309e3faa2099"
+        // Other SonarQube properties...
+    }
+}
+./gradlew sonarqube
 
 apply plugin: 'org.springframework.boot'
 
